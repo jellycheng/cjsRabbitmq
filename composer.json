@@ -1,0 +1,16 @@
+{
+  "name": "cjs/rabbitmq",
+  "description": "rabbitmq",
+  "keywords": [
+    "rabbitmq"
+  ],
+  "require": {
+    "php": ">=5.3.0",
+    "php-amqplib/php-amqplib": "2.6.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "CjsRabbitmq\\": "src/"
+    }
+  }
+}
