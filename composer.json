@@ -9,8 +9,18 @@
     "php-amqplib/php-amqplib": "2.6.*"
   },
   "autoload": {
+    "classmap": [
+
+    ],
+    "files": [
+
+    ],
     "psr-4": {
       "CjsRabbitmq\\": "src/"
+    },
+    "scripts": {
+      "post-update-cmd": ["rm -rf vendor/**/**/.git"],
+      "post-install-cmd": ["rm -rf vendor/**/**/.git"]
     }
   }
 }
