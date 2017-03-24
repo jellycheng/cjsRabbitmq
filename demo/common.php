@@ -36,3 +36,10 @@ spl_autoload_register(function ($class) {
 
 });
 
+function isWin() {
+    if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
+        return true;
+    } else {
+        return false;
+    }
+}
