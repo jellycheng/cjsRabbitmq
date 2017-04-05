@@ -5,8 +5,11 @@
 require __DIR__ . '/common.php';
 
 use PhpAmqpLib\Connection\AMQPStreamConnection;
+$rabbitmqConfig = include __DIR__ . '/config.php';
+$user_queue = $rabbitmqConfig['user_queue'];
+
 //1.打开连接
-$connection = new AMQPStreamConnection('dev-mq.a.pa.com', 5672, 'admin', 'admin');
+$connection = new AMQPStreamConnection($user_queue['host'], $user_queue['port'], $user_queue['user'], $user_queue['password']);
 //2.打开channel
 $channel = $connection->channel();
 //3.声明队列 其中hello_queue_name是队列名

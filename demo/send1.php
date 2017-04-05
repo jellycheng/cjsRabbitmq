@@ -4,9 +4,11 @@ require __DIR__ . '/common.php';
 
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Message\AMQPMessage;
+$rabbitmqConfig = include __DIR__ . '/config.php';
+$user_queue = $rabbitmqConfig['user_queue'];
 
 //1.连接  默认vhost='/'
-$connection = new AMQPStreamConnection('dev-mq.a.pa.com', 5672, 'admin', 'admin');
+$connection = new AMQPStreamConnection($user_queue['host'], $user_queue['port'], $user_queue['user'], $user_queue['password']);
 //2.打开channel
 $channel = $connection->channel();
 //使用默认交换机

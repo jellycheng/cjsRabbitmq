@@ -1,5 +1,7 @@
 # cjsRabbitmq
-
+http://www.rabbitmq.com
+https://github.com/rabbitmq
+纯php写的rabbitmq使用客户端：https://github.com/php-amqplib/php-amqplib
 ```
 Broker：  消息队列服务器实体。
 Exchange：消息交换机，它指定消息按什么规则，路由到哪个队列。
