@@ -22,8 +22,8 @@ $consumer = new RabbitmqConsumer([
                             'durable' => false
                         ], [
                             'routing_key' => 'test',
-                            'auto_ack' => false,
-                            'prefetch_count' => 1,
+                            'auto_ack' => false, //true表示,客户端取到数据就删除rabbitmq服务器中数据,false表示等待客户端调用ack()方法之后再删除服务器数据(起到可靠作用)
+                            'prefetch_count' => 10,//一般设置10吧,客户端最多存放未处理的数据记录数
                             'publish_confrim' => true
                         ]);
 
