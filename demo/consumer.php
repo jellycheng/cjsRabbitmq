@@ -4,7 +4,7 @@ require_once __DIR__ . '/common.php';
  * 消费消息 示例
  */
 
-use CjsRabbitmq\Consumer;
+use CjsRabbitmq\Consumer as RabbitmqConsumer;
 $consumer = new RabbitmqConsumer([
                             'host' => '127.0.0.1',
                             'port' => 5672,
