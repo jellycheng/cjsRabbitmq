@@ -17,7 +17,7 @@ $consumer = new RabbitmqConsumer([
                             'exchange' => 'exchange-test',
                             'type' => 'direct'
                         ], [
-                            'queue' => 'queue-test',
+                            'queue_name' => 'queue-test',
                             'auto_delete' => false,
                             'durable' => false
                         ], [

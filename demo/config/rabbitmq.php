@@ -21,7 +21,7 @@ return [
             'auto_delete' => false,
         ],
         'queue' => [        //消息队列载体配置
-            'queue' => 'queue_search_agent',
+            'queue_name' => 'queue_search_agent',
             'durable' => true,
             'auto_delete' => false,
         ],

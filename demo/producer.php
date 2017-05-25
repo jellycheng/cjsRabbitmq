@@ -18,7 +18,7 @@ $producer = new Producer([
     'exchange' => 'exchange-test',
     'type' => 'direct'
 ], [
-    'queue' => 'queue-test',
+    'queue_name' => 'queue-test',
     'durable' => false,
     'auto_delete' => false,
 ], [
