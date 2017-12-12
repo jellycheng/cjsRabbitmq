@@ -40,3 +40,17 @@ channel： 消息通道，在客户端的每个连接里，可建立多个channe
 
 
 ```
+
+###rabbitmq管理界面配置域名
+```
+1.nginx中配置代理
+server {
+    listen       80;
+    server_name  localhost dev-mq.a.xxx.com;
+    location / {
+        proxy_pass http://127.0.0.1:15672;
+    }
+}
+2.直接配置dns解析到指定的ip和端口
+
+```
